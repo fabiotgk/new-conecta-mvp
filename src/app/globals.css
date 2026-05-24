@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0b08;
+  --foreground: #fff7e8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.eyebrow {
+  color: #f8d991;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 0.35rem;
+  color: white;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 950;
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+}
+
+.field-label,
+.field-label-dark {
+  display: block;
+  color: rgb(214 211 209);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.field-input,
+.field-input-dark {
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.9rem 1rem;
+  color: white;
+  outline: none;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.field-input-dark {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.field-input:focus,
+.field-input-dark:focus {
+  border-color: #f4c15d;
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.field-input::placeholder,
+.field-input-dark::placeholder {
+  color: rgb(120 113 108);
+}
+
+select.field-input option {
+  background: #17100a;
+  color: white;
+}
